@@ -18,6 +18,11 @@ scoreboard objectives add seconds dummy
 scoreboard objectives add defenseTime dummy "Seconds Left to Build Your Defenses"
 scoreboard objectives add attackTime dummy "Seconds Before Sudden Death"
 
+scoreboard objectives add joinblue trigger "Join Blue Team"
+scoreboard objectives add joinred trigger "Join Red Team"
+scoreboard objectives add joingreen trigger "Join Green Team"
+scoreboard objectives add joinyellow trigger "Join Yellow Team"
+
 team add blue "Blue Team"
 team modify blue color blue
 team modify blue friendlyFire false
