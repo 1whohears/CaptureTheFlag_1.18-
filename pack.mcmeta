@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 9,
+		"pack_format": 8,
 		"description": "Capture the Flag for an smp or a new world! Requires other Datapacks for kits!"
 	}
 }
