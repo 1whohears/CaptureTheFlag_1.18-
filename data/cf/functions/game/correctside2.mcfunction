@@ -1,0 +1,1 @@
+#stay on the right side of the map for red blue green and yellow

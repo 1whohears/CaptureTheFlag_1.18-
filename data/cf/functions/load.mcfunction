@@ -32,6 +32,9 @@ scoreboard objectives add joinred trigger "Join Red Team"
 scoreboard objectives add joingreen trigger "Join Green Team"
 scoreboard objectives add joinyellow trigger "Join Yellow Team"
 
+scoreboard objectives add placeflag trigger
+scoreboard objectives add undoflag trigger
+
 team add blue "Blue Team"
 team modify blue color blue
 team modify blue friendlyFire false

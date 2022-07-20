@@ -1,5 +1,7 @@
 #uninstall
 
+function cf:setup/reset
+
 scoreboard objectives remove phase
 scoreboard objectives remove newWorldMode
 scoreboard objectives remove defenseTime
@@ -30,6 +32,9 @@ scoreboard objectives remove joinblue
 scoreboard objectives remove joinred
 scoreboard objectives remove joingreeen
 scoreboard objectives remove joinyellow
+
+scoreboard objectives remove placeflag
+scoreboard objectives remove undoflag
 
 scoreboard objectives remove displayBlue
 scoreboard objectives remove displayRed
