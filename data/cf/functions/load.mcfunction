@@ -2,6 +2,10 @@
 
 scoreboard objectives add phase dummy "Game Phase:0=Setup/1=Defense/2=Attack/3=SuddenDeath/4=GameOver"
 scoreboard objectives add newWorldMode dummy "Assume there were no items or builds setup before the game starts"
+scoreboard objectives add defenseTime dummy "Seconds Left to Build Your Defenses"
+scoreboard objectives add attackTime dummy "Seconds Before Sudden Death"
+scoreboard objectives add teamnum dummy "Number of Teams (2 or 4)"
+scoreboard objectives add enablekits dummy "Are there kits?"
 
 scoreboard objectives add totalDeaths deathCount "Total Deaths"
 scoreboard objectives setdisplay list totalDeaths
@@ -16,8 +20,12 @@ scoreboard objectives add villagerKills minecraft.killed:minecraft.villager
 scoreboard objectives add ticks dummy
 scoreboard objectives add seconds dummy
 
-scoreboard objectives add defenseTime dummy "Seconds Left to Build Your Defenses"
-scoreboard objectives add attackTime dummy "Seconds Before Sudden Death"
+scoreboard objectives add kit dummy "Selected Kit"
+scoreboard objectives add kit1 trigger
+scoreboard objectives add kit2 trigger
+scoreboard objectives add kit3 trigger
+scoreboard objectives add kit4 trigger
+scoreboard objectives add kit5 trigger
 
 scoreboard objectives add joinblue trigger "Join Blue Team"
 scoreboard objectives add joinred trigger "Join Red Team"
@@ -39,38 +47,47 @@ scoreboard objectives add displayRed dummy "RED TEAM"
 scoreboard objectives setdisplay sidebar.team.red displayRed
 
 team add green "Green Team"
-team modify green color red
+team modify green color green
 team modify green friendlyFire false
 team modify green seeFriendlyInvisibles true
 scoreboard objectives add displayGreen dummy "GREEN TEAM"
 scoreboard objectives setdisplay sidebar.team.green displayGreen
 
 team add yellow "Yellow Team"
-team modify yellow color red
+team modify yellow color yellow
 team modify yellow friendlyFire false
 team modify yellow seeFriendlyInvisibles true
 scoreboard objectives add displayYellow dummy "YELLOW TEAM"
 scoreboard objectives setdisplay sidebar.team.yellow displayYellow
 
-scoreboard objectives add flagState dummy "Flag State:0=Not Used/1=Safe/2=Stolen/3=Captured"
+scoreboard objectives add flagState dummy "Flag State:0=Not Set/1=Safe/2=Stolen/3=Captured"
+scoreboard objectives add teamSize dummy "Players on Team"
 scoreboard objectives add fx dummy
 scoreboard objectives add fy dummy
 scoreboard objectives add fz dummy
 
-team add orange
-team modify orange color gold
-team add purple
-team modify purple color dark_purple
-team add red2
-team modify red2 color dark_red
+team add _blue
+team modify _blue color blue
+team add _red
+team modify _red color red
+team add _green
+team modify _green color green
+team add _yellow
+team modify _yellow color yellow
+team add _orange
+team modify _orange color gold
+team add _purple
+team modify _purple color dark_purple
+team add _red2
+team modify _red2 color dark_red
 
-team join green Flag_Safe
-team join yellow Flag_Not_Set
-team join red Flag_Stolen
-team join orange Members
-team join red2 Enemies
-team join blue Defense_Time
-team join purple Battle_Time
-team join yellow Deathmatch
-team join blue Victory
-team join red You_Suck
+team join _green Flag_Safe
+team join _yellow Flag_Not_Set
+team join _red Flag_Stolen
+team join _orange Members
+team join _red2 Enemies
+team join _blue Defense_Time
+team join _purple Battle_Time
+team join _yellow Deathmatch
+team join _blue Victory
+team join _red You_Suck

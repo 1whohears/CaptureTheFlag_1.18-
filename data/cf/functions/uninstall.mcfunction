@@ -2,6 +2,10 @@
 
 scoreboard objectives remove phase
 scoreboard objectives remove newWorldMode
+scoreboard objectives remove defenseTime
+scoreboard objectives remove attackTime
+scoreboard objectives remove teamnum
+scoreboard objectives remove enablekits
 
 scoreboard objectives remove totalDeaths
 scoreboard objectives remove initDeaths
@@ -15,8 +19,12 @@ scoreboard objectives remove villagerKills
 scoreboard objectives remove ticks
 scoreboard objectives remove seconds
 
-scoreboard objectives remove defenseTime
-scoreboard objectives remove attackTime
+scoreboard objectives remove kit
+scoreboard objectives remove kit1
+scoreboard objectives remove kit2
+scoreboard objectives remove kit3
+scoreboard objectives remove kit4
+scoreboard objectives remove kit5
 
 scoreboard objectives remove joinblue
 scoreboard objectives remove joinred
@@ -37,6 +45,10 @@ team remove blue
 team remove red
 team remove green
 team remove yellow
-team remove red2
-team remove purple
-team remove orange
+team remove _blue
+team remove _red
+team remove _green
+team remove _yellow
+team remove _red2
+team remove _purple
+team remove _orange
