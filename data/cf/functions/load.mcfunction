@@ -4,6 +4,7 @@ scoreboard objectives add phase dummy "Game Phase:0=Setup/1=Defense/2=Attack/3=S
 scoreboard objectives add newWorldMode dummy "Assume there were no items or builds setup before the game starts"
 
 scoreboard objectives add totalDeaths deathCount "Total Deaths"
+scoreboard objectives setdisplay list totalDeaths
 scoreboard objectives add initDeaths dummy "Total Deaths When the Game Started"
 scoreboard objectives add currentDeaths dummy "Total-Init"
 scoreboard objectives add spectateTimer dummy "Time as spectator before respawn"
