@@ -2,6 +2,8 @@
 
 function cf:setup/reset
 
+execute in minecraft:overworld run forceload remove 0 0
+
 scoreboard objectives remove phase
 scoreboard objectives remove newWorldMode
 scoreboard objectives remove defenseTime
