@@ -14,7 +14,7 @@ execute if score data teamnum matches 4 run function cf:teams/selectteams2
 execute if score data enablekits matches 1 run function cf:kits/selectkits
 
 #dont loose inventory
-gamerule keepinventory true
+gamerule keepInventory true
 
 #check team sizes
 tellraw @s {"text":"START GAME","bold":true,"underlined":true,"color":"gold","clickEvent":{"action":"run_command","value":"/function cf:setup/teamsizecheck"}}

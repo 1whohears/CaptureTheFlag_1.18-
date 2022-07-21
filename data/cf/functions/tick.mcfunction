@@ -4,6 +4,8 @@ function cf:timer/seconds
 
 function cf:teams/teamsize
 
+function cf:game/display
+
 scoreboard players set @a currentDeaths 0
 execute at @a run scoreboard players operation @p currentDeaths += @p totalDeaths
 execute at @a run scoreboard players operation @p currentDeaths -= @p initDeaths
