@@ -14,6 +14,22 @@ scoreboard players set data attackTime 1800
 scoreboard players set data teamnum 2
 scoreboard players set data enablekits 0
 
+scoreboard players reset @a kit1
+scoreboard players reset @a kit2
+scoreboard players reset @a kit3
+scoreboard players reset @a kit4
+scoreboard players reset @a kit5
+scoreboard players reset @a joinblue
+scoreboard players reset @a joinred
+scoreboard players reset @a joingreen
+scoreboard players reset @a joinyellow
+scoreboard players reset @a placeflag
+scoreboard players reset @a undoflag
+scoreboard players reset @a trackblue
+scoreboard players reset @a trackred
+scoreboard players reset @a trackgreen
+scoreboard players reset @a trackyellow
+
 #reset tags
 tag @a remove died
 tag @a remove captain

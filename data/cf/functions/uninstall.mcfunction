@@ -35,6 +35,10 @@ scoreboard objectives remove joinyellow
 
 scoreboard objectives remove placeflag
 scoreboard objectives remove undoflag
+scoreboard objectives remove trackblue
+scoreboard objectives remove trackred
+scoreboard objectives remove trackgreen
+scoreboard objectives remove trackyellow
 
 scoreboard objectives remove displayBlue
 scoreboard objectives remove displayRed
@@ -42,9 +46,9 @@ scoreboard objectives remove displayGreen
 scoreboard objectives remove displayYellow
 
 scoreboard objectives remove flagState
-scoreboard objectives remove fx
-scoreboard objectives remove fy
-scoreboard objectives remove fz
+scoreboard objectives remove x
+scoreboard objectives remove y
+scoreboard objectives remove z
 
 team remove blue
 team remove red

@@ -34,6 +34,10 @@ scoreboard objectives add joinyellow trigger "Join Yellow Team"
 
 scoreboard objectives add placeflag trigger
 scoreboard objectives add undoflag trigger
+scoreboard objectives add trackblue trigger
+scoreboard objectives add trackred trigger
+scoreboard objectives add trackgreen trigger
+scoreboard objectives add trackyellow trigger
 
 team add blue "Blue Team"
 team modify blue color blue
@@ -65,9 +69,9 @@ scoreboard objectives setdisplay sidebar.team.yellow displayYellow
 
 scoreboard objectives add flagState dummy "Flag State:0=Not Set/1=Safe/2=Stolen/3=Captured"
 scoreboard objectives add teamSize dummy "Players on Team"
-scoreboard objectives add fx dummy
-scoreboard objectives add fy dummy
-scoreboard objectives add fz dummy
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
 
 team add _blue
 team modify _blue color blue
