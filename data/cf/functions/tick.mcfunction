@@ -6,9 +6,9 @@ function cf:teams/teamsize
 
 function cf:game/display
 
-execute as @a store result score center x run data get entity @s Pos[0]
-execute as @a store result score center y run data get entity @s Pos[1]
-execute as @a store result score center z run data get entity @s Pos[2]
+execute as @a store result score @s x run data get entity @s Pos[0]
+execute as @a store result score @s y run data get entity @s Pos[1]
+execute as @a store result score @s z run data get entity @s Pos[2]
 
 scoreboard players set @a currentDeaths 0
 execute at @a run scoreboard players operation @p currentDeaths += @p totalDeaths

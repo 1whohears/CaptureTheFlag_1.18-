@@ -14,6 +14,4 @@ execute in minecraft:overworld run forceload add 0 0
 execute in minecraft:overworld run setblock 0 0 0 shulker_box
 execute in minecraft:overworld run setblock 0 1 0 bedrock
 
-#set flag position in shulkers
-
 #give compasses
