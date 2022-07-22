@@ -5,6 +5,25 @@ scoreboard players set data phase 1
 scoreboard players set data ticks 0
 scoreboard players set data seconds 0
 
+execute as @a run trigger kit1
+execute as @a run trigger kit2
+execute as @a run trigger kit3
+execute as @a run trigger kit4
+execute as @a run trigger kit5
+execute as @a run trigger joinblue
+execute as @a run trigger joinred
+execute as @a run trigger joingreen
+execute as @a run trigger joinyellow
+scoreboard players reset @a kit1
+scoreboard players reset @a kit2
+scoreboard players reset @a kit3
+scoreboard players reset @a kit4
+scoreboard players reset @a kit5
+scoreboard players reset @a joinblue
+scoreboard players reset @a joinred
+scoreboard players reset @a joingreen
+scoreboard players reset @a joinyellow
+
 #Initial setup for any title commands
 title @a times 5 30 5
 title @a title {"text":"DEFENSE TIME!","color":"blue"}
@@ -33,7 +52,7 @@ scoreboard players set @a[tag=player] leave 0
 #set world border
 execute if score data teamnum matches 2 run worldborder set 1000 0
 execute if score data teamnum matches 4 run worldborder set 2000 0
-execute at @e[tag=center] run worldborder center ~ ~
+execute at @e[tag=center,limit=1] run worldborder center ~ ~
 worldborder damage amount 1
 worldborder damage buffer 2
 worldborder warning distance 1

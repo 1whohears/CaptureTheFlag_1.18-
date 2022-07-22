@@ -14,6 +14,21 @@ scoreboard players set data attackTime 1800
 scoreboard players set data teamnum 2
 scoreboard players set data enablekits 0
 
+execute as @a run trigger kit1
+execute as @a run trigger kit2
+execute as @a run trigger kit3
+execute as @a run trigger kit4
+execute as @a run trigger kit5
+execute as @a run trigger joinblue
+execute as @a run trigger joinred
+execute as @a run trigger joingreen
+execute as @a run trigger joinyellow
+execute as @a run trigger placeflag
+execute as @a run trigger undoflag
+execute as @a run trigger trackblue
+execute as @a run trigger trackred
+execute as @a run trigger trackgreen
+execute as @a run trigger trackyellow
 scoreboard players reset @a kit1
 scoreboard players reset @a kit2
 scoreboard players reset @a kit3

@@ -6,13 +6,7 @@ function cf:teams/teamsize
 
 function cf:game/display
 
-execute as @a store result score @s x run data get entity @s Pos[0]
-execute as @a store result score @s y run data get entity @s Pos[1]
-execute as @a store result score @s z run data get entity @s Pos[2]
-
-scoreboard players set @a currentDeaths 0
-execute at @a run scoreboard players operation @p currentDeaths += @p totalDeaths
-execute at @a run scoreboard players operation @p currentDeaths -= @p initDeaths
+function cf:game/playerdata
 
 execute if score data phase matches 0 run function cf:phase/phase0
 execute if score data phase matches 1 run function cf:phase/phase1

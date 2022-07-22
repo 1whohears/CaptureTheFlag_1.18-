@@ -1,6 +1,7 @@
 #kill all cft entities
 
 kill @e[tag=center]
+kill @e[tag=respawn]
 kill @e[tag=mb]
 kill @e[tag=vb]
 kill @e[tag=mr]
