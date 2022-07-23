@@ -73,6 +73,21 @@ effect give @a[tag=player] saturation 10 5 true
 #distribute kits
 function cf:kits/givekits
 
+##flag compass tracker setup
+execute in minecraft:overworld run forceload add 0 0
+#blue
+execute in minecraft:overworld run setblock 0 -64 0 shulker_box
+execute in minecraft:overworld run setblock 0 -63 0 bedrock
+#red
+execute in minecraft:overworld run setblock 1 -64 0 shulker_box
+execute in minecraft:overworld run setblock 1 -63 0 bedrock
+#green
+execute in minecraft:overworld run setblock 2 -64 0 shulker_box
+execute in minecraft:overworld run setblock 2 -63 0 bedrock
+#yellow
+execute in minecraft:overworld run setblock 3 -64 0 shulker_box
+execute in minecraft:overworld run setblock 3 -63 0 bedrock
+
 execute as @a run trigger kit1
 execute as @a run trigger kit2
 execute as @a run trigger kit3
