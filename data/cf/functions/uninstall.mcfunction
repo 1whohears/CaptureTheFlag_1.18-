@@ -15,6 +15,7 @@ scoreboard objectives remove totalDeaths
 scoreboard objectives remove initDeaths
 scoreboard objectives remove currentDeaths
 scoreboard objectives remove spectateTimer
+scoreboard objectives remove trackslot
 
 scoreboard objectives remove leave
 scoreboard objectives remove pearl

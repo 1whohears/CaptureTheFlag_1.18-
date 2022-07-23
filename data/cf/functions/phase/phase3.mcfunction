@@ -25,7 +25,11 @@ execute as @a[tag=player] if score @s trackblue matches 1 run function cf:game/b
 execute as @a[tag=player] if score @s trackgreen matches 1 run function cf:game/green/gettracker
 execute as @a[tag=player] if score @s trackyellow matches 1 run function cf:game/yellow/gettracker
 
-#update trackers 
+#update trackers
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_red:1b}}}] run function cf:game/red/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_blue:1b}}}] run function cf:game/blue/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_green:1b}}}] run function cf:game/green/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_yellow:1b}}}] run function cf:game/yellow/updatetracker
 
 #check for winner
 execute if score notempty teamSize matches 1 if score red teamSize matches 1.. run function cf:game/red/win

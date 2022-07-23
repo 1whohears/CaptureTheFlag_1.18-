@@ -12,6 +12,7 @@ scoreboard objectives setdisplay list totalDeaths
 scoreboard objectives add initDeaths dummy "Total Deaths When the Game Started"
 scoreboard objectives add currentDeaths dummy "Total-Init"
 scoreboard objectives add spectateTimer dummy "Time as spectator before respawn"
+scoreboard objectives add trackslot dummy "The slot your tracker compass is in"
 
 scoreboard objectives add leave minecraft.custom:minecraft.leave_game
 scoreboard objectives add pearl minecraft.used:minecraft.ender_pearl
