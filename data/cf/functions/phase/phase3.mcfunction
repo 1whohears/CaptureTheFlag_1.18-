@@ -10,10 +10,10 @@ execute unless entity @a[tag=captain,team=green] run tag @r[tag=player,team=gree
 execute unless entity @a[tag=captain,team=yellow] run tag @r[tag=player,team=yellow] add captain
 
 #track team captain
-execute as @a[tag=captain,team=red,limit=1] run function cf:game/red/setflagpos
-execute as @a[tag=captain,team=blue,limit=1] run function cf:game/blue/setflagpos
-execute as @a[tag=captain,team=green,limit=1] run function cf:game/green/setflagpos
-execute as @a[tag=captain,team=yellow,limit=1] run function cf:game/yellow/setflagpos
+execute if score data ticks matches 0 as @a[tag=captain,team=red,limit=1] run function cf:game/red/setflagpos
+execute if score data ticks matches 0 as @a[tag=captain,team=blue,limit=1] run function cf:game/blue/setflagpos
+execute if score data ticks matches 0 as @a[tag=captain,team=green,limit=1] run function cf:game/green/setflagpos
+execute if score data ticks matches 0 as @a[tag=captain,team=yellow,limit=1] run function cf:game/yellow/setflagpos
 
 #track switching
 scoreboard players enable @a[tag=player] trackred
