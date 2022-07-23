@@ -12,3 +12,5 @@ summon armor_stand ~ ~2 ~ {CustomNameVisible:1b,Marker:1b,Invisible:1b,Tags:["mg
 execute as @e[tag=mg,limit=1] run function cf:game/storexyz
 
 execute as @e[tag=mg,limit=1] run function cf:game/green/setflagpos
+
+tellraw @a ["",{"selector":"@s","underlined":true},{"text":" placed the green flag!","color":"green"}]

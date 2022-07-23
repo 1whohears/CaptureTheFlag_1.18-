@@ -27,5 +27,8 @@ function cf:game/respawn
 #bans
 function cf:game/bans
 
+#spectators
+function cf:game/spectators
+
 #switch to attack time
 execute if score data seconds = data defenseTime run function cf:phase/init2

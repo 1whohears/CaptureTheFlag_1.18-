@@ -27,7 +27,7 @@ execute if score yellow flagState matches 0 if score yellow teamSize matches 1..
 
 ##flag compass tracker setup
 execute in minecraft:overworld run forceload add 0 0
-execute in minecraft:overworld run setblock 0 0 0 shulker_box
-execute in minecraft:overworld run setblock 0 1 0 bedrock
+execute in minecraft:overworld run setblock 0 -64 0 shulker_box
+execute in minecraft:overworld run setblock 0 -63 0 bedrock
 
 #give compasses

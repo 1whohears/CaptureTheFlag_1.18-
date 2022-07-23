@@ -7,3 +7,5 @@ kill @e[tag=vb]
 
 tag @s add carry
 tag @s add carryblue
+
+tellraw @a ["",{"selector":"@s","underlined":true},{"text":" stole the blue flag!","color":"blue"}]
