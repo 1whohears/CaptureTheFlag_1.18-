@@ -46,7 +46,6 @@ scoreboard players reset @a trackgreen
 scoreboard players reset @a trackyellow
 
 #reset tags
-tag @a remove died
 tag @a remove captain
 tag @a remove player
 tag @a remove carry

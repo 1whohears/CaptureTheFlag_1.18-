@@ -11,6 +11,7 @@ scoreboard players reset @a placeflag
 scoreboard players reset @a undoflag
 
 title @a title {"text":"ATTACK TIME!","color":"gold"}
+tellraw @a {"text":"ATTACK TIME!","bold":true,"color":"gold"}
 
 #spawn flag at captain if no flag is spawned yet
 execute if score red flagState matches 0 if score red teamSize matches 1.. as @a[tag=captain,team=red,nbt={Dimension:"minecraft:overworld"}] at @s run function cf:game/red/placeflag

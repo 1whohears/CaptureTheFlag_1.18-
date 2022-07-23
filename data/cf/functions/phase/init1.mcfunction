@@ -27,6 +27,7 @@ scoreboard players reset @a joinyellow
 #Initial setup for any title commands
 title @a times 5 30 5
 title @a title {"text":"DEFENSE TIME!","color":"blue"}
+tellraw @a {"text":"DEFENSE TIME!!","bold":true,"color":"blue"}
 
 #make center marker invisible
 data modify entity @e[tag=center,limit=1] CustomNameVisible set value 0b
