@@ -44,6 +44,7 @@ scoreboard players reset @a trackblue
 scoreboard players reset @a trackred
 scoreboard players reset @a trackgreen
 scoreboard players reset @a trackyellow
+scoreboard players reset @a playertp
 
 #reset tags
 tag @a remove captain

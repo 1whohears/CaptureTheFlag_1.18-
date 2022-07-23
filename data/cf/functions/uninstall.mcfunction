@@ -45,6 +45,7 @@ scoreboard objectives remove trackblue
 scoreboard objectives remove trackred
 scoreboard objectives remove trackgreen
 scoreboard objectives remove trackyellow
+scoreboard objectives remove playertp
 
 scoreboard objectives remove displayBlue
 scoreboard objectives remove displayRed

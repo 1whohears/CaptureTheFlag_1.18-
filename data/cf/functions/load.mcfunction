@@ -42,6 +42,7 @@ scoreboard objectives add trackblue trigger
 scoreboard objectives add trackred trigger
 scoreboard objectives add trackgreen trigger
 scoreboard objectives add trackyellow trigger
+scoreboard objectives add playertp trigger
 
 team add blue "Blue Team"
 team modify blue color blue
