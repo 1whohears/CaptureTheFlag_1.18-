@@ -7,7 +7,7 @@ scoreboard players enable @a kit4
 scoreboard players enable @a kit5
 
 execute as @a[scores={kit1=1..}] run function cf:kits/select1
-execute as @a[scores={kit1=2..}] run function cf:kits/select2
-execute as @a[scores={kit1=3..}] run function cf:kits/select3
-execute as @a[scores={kit1=4..}] run function cf:kits/select4
-execute as @a[scores={kit1=5..}] run function cf:kits/select5
+execute as @a[scores={kit2=1..}] run function cf:kits/select2
+execute as @a[scores={kit3=1..}] run function cf:kits/select3
+execute as @a[scores={kit4=1..}] run function cf:kits/select4
+execute as @a[scores={kit5=1..}] run function cf:kits/select5
