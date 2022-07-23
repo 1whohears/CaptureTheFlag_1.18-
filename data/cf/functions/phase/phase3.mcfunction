@@ -15,6 +15,18 @@ execute as @a[tag=captain,team=blue,limit=1] run function cf:game/blue/setflagpo
 execute as @a[tag=captain,team=green,limit=1] run function cf:game/green/setflagpos
 execute as @a[tag=captain,team=yellow,limit=1] run function cf:game/yellow/setflagpos
 
+#track switching
+scoreboard players enable @a[tag=player] trackred
+scoreboard players enable @a[tag=player] trackblue
+scoreboard players enable @a[tag=player] trackgreen
+scoreboard players enable @a[tag=player] trackyellow
+execute as @a[tag=player] if score @s trackred matches 1 run function cf:game/red/gettracker
+execute as @a[tag=player] if score @s trackblue matches 1 run function cf:game/blue/gettracker
+execute as @a[tag=player] if score @s trackgreen matches 1 run function cf:game/green/gettracker
+execute as @a[tag=player] if score @s trackyellow matches 1 run function cf:game/yellow/gettracker
+
+#update trackers 
+
 #check for winner
 execute if score notempty teamSize matches 1 if score red teamSize matches 1.. run function cf:game/red/win
 execute if score notempty teamSize matches 1 if score blue teamSize matches 1.. run function cf:game/blue/win

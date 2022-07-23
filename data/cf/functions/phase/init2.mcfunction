@@ -28,7 +28,21 @@ execute if score yellow flagState matches 0 if score yellow teamSize matches 1..
 
 ##flag compass tracker setup
 execute in minecraft:overworld run forceload add 0 0
+#blue
 execute in minecraft:overworld run setblock 0 -64 0 shulker_box
 execute in minecraft:overworld run setblock 0 -63 0 bedrock
+#red
+execute in minecraft:overworld run setblock 1 -64 0 shulker_box
+execute in minecraft:overworld run setblock 1 -63 0 bedrock
+#green
+execute in minecraft:overworld run setblock 2 -64 0 shulker_box
+execute in minecraft:overworld run setblock 2 -63 0 bedrock
+#yellow
+execute in minecraft:overworld run setblock 3 -64 0 shulker_box
+execute in minecraft:overworld run setblock 3 -63 0 bedrock
 
 #give compasses
+execute as @a[team=blue] run run function cf:game/red/gettracker
+execute as @a[team=red] run run function cf:game/blue/gettracker
+execute as @a[team=yellow] run run function cf:game/green/gettracker
+execute as @a[team=green] run run function cf:game/yellow/gettracker
