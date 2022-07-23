@@ -1,7 +1,10 @@
 #phase 3 sudden death
 
 #tp players that die to death point and put them in spectator
-execute as @a[tag=player,nbt={DeathTime:0s}] run function cf:game/die
+execute as @a[tag=player,nbt={DeathTime:1s}] at @s run function cf:game/die
+
+#spectators
+function cf:game/spectators
 
 #make random player captain if they die
 execute unless entity @a[tag=captain,team=red] run tag @r[tag=player,team=red] add captain

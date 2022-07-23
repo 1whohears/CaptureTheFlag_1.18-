@@ -33,7 +33,7 @@ scoreboard players set @a[tag=player] leave 0
 
 #set world border
 execute if score data teamnum matches 2 run worldborder set 1000 0
-execute if score data teamnum matches 4 run worldborder set 2000 0
+execute if score data teamnum matches 4 run worldborder set 1500 0
 execute at @e[tag=center,limit=1] run worldborder center ~ ~
 worldborder damage amount 1
 worldborder damage buffer 2
@@ -48,10 +48,10 @@ gamerule keepInventory true
 #tp players
 execute if score data teamnum matches 2 at @e[tag=center,limit=1] run spreadplayers ~300 ~ 200 100 true @a[tag=player,team=blue]
 execute if score data teamnum matches 2 at @e[tag=center,limit=1] run spreadplayers ~-300 ~ 200 100 true @a[tag=player,team=red]
-execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~500 ~500 200 100 true @a[tag=player,team=blue]
-execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~-500 ~-500 200 100 true @a[tag=player,team=red]
-execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~-500 ~500 200 100 true @a[tag=player,team=green]
-execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~500 ~-500 200 100 true @a[tag=player,team=yellow]
+execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~400 ~400 200 100 true @a[tag=player,team=blue]
+execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~-400 ~-400 200 100 true @a[tag=player,team=red]
+execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~-400 ~400 200 100 true @a[tag=player,team=green]
+execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~400 ~-400 200 100 true @a[tag=player,team=yellow]
 
 #set new spawn points
 execute as @e[tag=center,limit=1] at @s run setworldspawn ~ ~ ~

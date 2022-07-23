@@ -7,10 +7,10 @@ function cf:game/respawn
 function cf:game/bans
 
 #check if flags were stolen
-execute if score red flagState matches 1 at @e[tag=mr] unless entity @e[tag=vb,distance=..4] as @p[scores={villagerKills=1..},team=!red,distance=..4] run function cf:game/red/stealflag
-execute if score blue flagState matches 1 at @e[tag=mb] unless entity @e[tag=vb,distance=..4] as @p[scores={villagerKills=1..},team=!blue,distance=..4] run function cf:game/blue/stealflag
-execute if score green flagState matches 1 at @e[tag=mg] unless entity @e[tag=vb,distance=..4] as @p[scores={villagerKills=1..},team=!green,distance=..4] run function cf:game/green/stealflag
-execute if score yellow flagState matches 1 at @e[tag=my] unless entity @e[tag=vb,distance=..4] as @p[scores={villagerKills=1..},team=!yellow,distance=..4] run function cf:game/yellow/stealflag
+execute if score red flagState matches 1 at @e[tag=mr] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!red,distance=..4] run function cf:game/red/stealflag
+execute if score blue flagState matches 1 at @e[tag=mb] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!blue,distance=..4] run function cf:game/blue/stealflag
+execute if score green flagState matches 1 at @e[tag=mg] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!green,distance=..4] run function cf:game/green/stealflag
+execute if score yellow flagState matches 1 at @e[tag=my] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!yellow,distance=..4] run function cf:game/yellow/stealflag
 scoreboard players reset @a villagerKills
 
 #track the thief
@@ -26,10 +26,10 @@ execute if score green flagState matches 2 as @a[tag=carrygreen,limit=1,nbt={Dea
 execute if score yellow flagState matches 2 as @a[tag=carryyellow,limit=1,nbt={DeathTime:1s}] run function cf:game/yellow/dropflag
 
 #check if the flag has been captured
-execute if score red flagState matches 1 at @e[tag=mr] as @a[distance=..2,team=red,tag=carry] run function cf:game/capture
-execute if score blue flagState matches 1 at @e[tag=mb] as @a[distance=..2,team=blue,tag=carry] run function cf:game/capture
-execute if score green flagState matches 1 at @e[tag=mg] as @a[distance=..2,team=green,tag=carry] run function cf:game/capture
-execute if score yellow flagState matches 1 at @e[tag=my] as @a[distance=..2,team=yellow,tag=carry] run function cf:game/capture
+execute if score red flagState matches 1 at @e[tag=mr] positioned ~ ~-2 ~ as @a[distance=..2,team=red,tag=carry] run function cf:game/capture
+execute if score blue flagState matches 1 at @e[tag=mb] positioned ~ ~-2 ~ as @a[distance=..2,team=blue,tag=carry] run function cf:game/capture
+execute if score green flagState matches 1 at @e[tag=mg] positioned ~ ~-2 ~ as @a[distance=..2,team=green,tag=carry] run function cf:game/capture
+execute if score yellow flagState matches 1 at @e[tag=my] positioned ~ ~-2 ~ as @a[distance=..2,team=yellow,tag=carry] run function cf:game/capture
 
 #TODO thieves drop the flag if they disconnect
 
