@@ -22,6 +22,9 @@ scoreboard objectives remove villagerKills
 
 scoreboard objectives remove ticks
 scoreboard objectives remove seconds
+scoreboard objectives remove xgoal
+scoreboard objectives remove ygoal
+scoreboard objectives remove zgoal
 
 scoreboard objectives remove kit
 scoreboard objectives remove kit1

@@ -13,15 +13,17 @@ scoreboard players reset @a undoflag
 title @a title {"text":"ATTACK TIME!","color":"gold"}
 
 #spawn flag at captain if no flag is spawned yet
-#TODO use function cf:game/tpbyscore to send the new flag to the last place thee captain was in the overworld
-execute if score blue flagState matches 0 if score blue teamSize matches 1.. as @a[tag=captain,team=blue,nbt={Dimension:"minecraft:overworld"}] at @s run function cf:game/blue/placeflag
-execute if score blue flagState matches 0 if score blue teamSize matches 1.. at @e[tag=center,limit=1] run function cf:game/blue/placeflag
 execute if score red flagState matches 0 if score red teamSize matches 1.. as @a[tag=captain,team=red,nbt={Dimension:"minecraft:overworld"}] at @s run function cf:game/red/placeflag
-execute if score red flagState matches 0 if score red teamSize matches 1.. at @e[tag=center,limit=1] run function cf:game/red/placeflag
+execute if score red flagState matches 0 if score red teamSize matches 1.. as @a[tag=captain,team=red] run function cf:game/red/flagatxyz
+
+execute if score blue flagState matches 0 if score blue teamSize matches 1.. as @a[tag=captain,team=blue,nbt={Dimension:"minecraft:overworld"}] at @s run function cf:game/blue/placeflag
+execute if score blue flagState matches 0 if score blue teamSize matches 1.. as @a[tag=captain,team=blue] run function cf:game/blue/flagatxyz
+
 execute if score green flagState matches 0 if score green teamSize matches 1.. as @a[tag=captain,team=green,nbt={Dimension:"minecraft:overworld"}] at @s run function cf:game/green/placeflag
-execute if score green flagState matches 0 if score green teamSize matches 1.. at @e[tag=center,limit=1] run function cf:game/green/placeflag
+execute if score green flagState matches 0 if score green teamSize matches 1.. as @a[tag=captain,team=green] run function cf:game/green/flagatxyz
+
 execute if score yellow flagState matches 0 if score yellow teamSize matches 1.. as @a[tag=captain,team=yellow,nbt={Dimension:"minecraft:overworld"}] at @s run function cf:game/yellow/placeflag
-execute if score yellow flagState matches 0 if score yellow teamSize matches 1.. at @e[tag=center,limit=1] at @s run function cf:game/yellow/placeflag
+execute if score yellow flagState matches 0 if score yellow teamSize matches 1.. as @a[tag=captain,team=yellow] run function cf:game/yellow/flagatxyz
 
 ##flag compass tracker setup
 execute in minecraft:overworld run forceload add 0 0

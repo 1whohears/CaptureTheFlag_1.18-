@@ -19,6 +19,9 @@ scoreboard objectives add villagerKills minecraft.killed:minecraft.villager
 
 scoreboard objectives add ticks dummy
 scoreboard objectives add seconds dummy
+scoreboard objectives add xgoal dummy
+scoreboard objectives add ygoal dummy
+scoreboard objectives add zgoal dummy
 
 scoreboard objectives add kit dummy "Selected Kit"
 scoreboard objectives add kit1 trigger

@@ -76,8 +76,8 @@ execute at @e[tag=center,limit=1] run setworldspawn ~ 200 ~
 execute at @a[tag=player] run spawnpoint @s ~ ~ ~
 
 #give random team member captain
-execute unless entity @a[team=blue,tag=captain] run tag @r[team=blue] add captain
 execute unless entity @a[team=red,tag=captain] run tag @r[team=red] add captain
+execute unless entity @a[team=blue,tag=captain] run tag @r[team=blue] add captain
 execute unless entity @a[team=green,tag=captain] run tag @r[team=green] add captain
 execute unless entity @a[team=yellow,tag=captain] run tag @r[team=yellow] add captain
 
