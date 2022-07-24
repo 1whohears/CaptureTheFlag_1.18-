@@ -1,5 +1,14 @@
 #update tracker
 
+execute store result score math x run data get block 1 -64 0 Items[0].tag.LodestonePos.X
+scoreboard players operation math x -= @s x
+execute store result score math y run data get block 1 -64 0 Items[0].tag.LodestonePos.Y
+scoreboard players operation math y -= @s y
+execute store result score math z run data get block 1 -64 0 Items[0].tag.LodestonePos.Z
+scoreboard players operation math z -= @s z
+
+title @s actionbar ["",{"text":"[dx=","color":"red"},{"score":{"name":"math","objective":"x"},"color":"red"},{"text":",dy=","color":"red"},{"score":{"name":"math","objective":"y"},"color":"red"},{"selector":",dz=","color":"red"},{"score":{"name":"math","objective":"z"},"color":"red"},{"text":"]","color":"red"}]
+
 execute store result score @s trackslot run data get entity @s Inventory[{tag:{track_flag_red:1b}}].Slot
 
 execute if score @s trackslot matches 0 run item replace entity @s hotbar.0 with air

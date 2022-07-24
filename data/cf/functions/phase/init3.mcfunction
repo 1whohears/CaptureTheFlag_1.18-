@@ -2,6 +2,9 @@
 
 scoreboard players set data phase 3
 
+scoreboard players set data ticks 0
+scoreboard players set data seconds 0
+
 title @a title {"text":"DEATHMATCH!","color":"dark_purple"}
 tellraw @a {"text":"DEATHMATCH!","bold":true,"color":"dark_purple"}
 
@@ -22,4 +25,4 @@ kill @e[tag=vg]
 kill @e[tag=my]
 kill @e[tag=vy]
 
-worldborder set 10 600
+worldborder set 32 720
