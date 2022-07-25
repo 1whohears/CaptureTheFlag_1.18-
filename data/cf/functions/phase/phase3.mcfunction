@@ -3,6 +3,9 @@
 #anyone respawning is put into survival instantly
 execute as @a[tag=player,scores={spectateTimer=0..}] run gamemode survival @s
 
+#bans
+function cf:game/bans
+
 #tp players that die to death point and put them in spectator
 execute as @a[tag=player,nbt={DeathTime:1s}] at @s run function cf:game/die
 
