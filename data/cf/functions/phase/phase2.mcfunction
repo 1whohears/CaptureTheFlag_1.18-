@@ -7,10 +7,10 @@ function cf:game/respawn
 function cf:game/bans
 
 #check if flags were stolen
-execute if score red flagState matches 1 at @e[tag=mr] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!red,distance=..4] run function cf:game/red/stealflag
+execute if score red flagState matches 1 at @e[tag=mr] positioned ~ ~-2 ~ unless entity @e[tag=vr,distance=..3] as @p[scores={villagerKills=1..},team=!red,distance=..4] run function cf:game/red/stealflag
 execute if score blue flagState matches 1 at @e[tag=mb] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!blue,distance=..4] run function cf:game/blue/stealflag
-execute if score green flagState matches 1 at @e[tag=mg] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!green,distance=..4] run function cf:game/green/stealflag
-execute if score yellow flagState matches 1 at @e[tag=my] positioned ~ ~-2 ~ unless entity @e[tag=vb,distance=..3] as @p[scores={villagerKills=1..},team=!yellow,distance=..4] run function cf:game/yellow/stealflag
+execute if score green flagState matches 1 at @e[tag=mg] positioned ~ ~-2 ~ unless entity @e[tag=vg,distance=..3] as @p[scores={villagerKills=1..},team=!green,distance=..4] run function cf:game/green/stealflag
+execute if score yellow flagState matches 1 at @e[tag=my] positioned ~ ~-2 ~ unless entity @e[tag=vy,distance=..3] as @p[scores={villagerKills=1..},team=!yellow,distance=..4] run function cf:game/yellow/stealflag
 scoreboard players reset @a villagerKills
 
 #track the thief
