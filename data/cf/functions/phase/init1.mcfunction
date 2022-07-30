@@ -46,6 +46,7 @@ execute if score data newWorldMode matches 1 run clear @a[tag=player]
 gamerule keepInventory true
 
 #tp players
+tp @a[tag=player,nbt={Dimension:"minecraft:the_nether"}] @e[tag=center,limit=1]
 execute if score data teamnum matches 2 at @e[tag=center,limit=1] run spreadplayers ~300 ~ 200 100 true @a[tag=player,team=blue]
 execute if score data teamnum matches 2 at @e[tag=center,limit=1] run spreadplayers ~-300 ~ 200 100 true @a[tag=player,team=red]
 execute if score data teamnum matches 4 at @e[tag=center,limit=1] run spreadplayers ~400 ~400 200 100 true @a[tag=player,team=blue]

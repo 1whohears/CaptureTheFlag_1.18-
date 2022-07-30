@@ -7,7 +7,7 @@ scoreboard players operation math yn -= @s yn
 execute store result score math zn run data get block 3 0 0 Items[0].tag.LodestonePos.Z
 scoreboard players operation math zn -= @s zn
 
-title @s actionbar ["",{"text":"∆x=","color":"yellow"},{"score":{"name":"math","objective":"xn"},"color":"yellow"},{"text":",∆y=","color":"yellow"},{"score":{"name":"math","objective":"yn"},"color":"yellow"},{"selector":",∆z=","color":"yellow"},{"score":{"name":"math","objective":"zn"},"color":"yellow"}]
+title @s actionbar ["",{"text":"∆x=","color":"yellow"},{"score":{"name":"math","objective":"xn"},"color":"yellow"},{"text":",∆y=","color":"yellow"},{"score":{"name":"math","objective":"yn"},"color":"yellow"},{"text":",∆z=","color":"yellow"},{"score":{"name":"math","objective":"zn"},"color":"yellow"}]
 
 execute store result score @s trackslot run data get entity @s Inventory[{tag:{track_flag_yellow:1b}}].Slot
 
