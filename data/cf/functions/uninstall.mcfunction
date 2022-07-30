@@ -56,6 +56,9 @@ scoreboard objectives remove flagState
 scoreboard objectives remove x
 scoreboard objectives remove y
 scoreboard objectives remove z
+scoreboard objectives remove xn
+scoreboard objectives remove yn
+scoreboard objectives remove zn
 
 team remove blue
 team remove red

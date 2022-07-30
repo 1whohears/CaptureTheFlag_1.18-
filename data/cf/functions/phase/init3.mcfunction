@@ -25,4 +25,4 @@ kill @e[tag=vg]
 kill @e[tag=my]
 kill @e[tag=vy]
 
-worldborder set 32 720
+worldborder set 100 900

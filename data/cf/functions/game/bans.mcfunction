@@ -1,16 +1,10 @@
 #banned stuff
 
-#the nether and end are just being universally banned for now until I can get tacker compasses to work in those dimensions
-kill @a[nbt={Dimension:"minecraft:the_nether"},tag=player]
-kill @a[nbt={Dimension:"minecraft:the_end"},tag=player]
-
-#going to the nether
+#ban going to the nether as a flag carrier
 kill @a[nbt={Dimension:"minecraft:the_nether"},tag=carry,tag=player]
-#execute as @a[tag=carry] at @s if block ~ ~ ~ minecraft:nether_portal run kill @s
 
-#going to the end
-kill @a[nbt={Dimension:"minecraft:the_end"},tag=carry,tag=player]
-#execute as @a[tag=carry] at @s if block ~ ~ ~ minecraft:end_portal run kill @s
+#the end is just banned
+kill @a[nbt={Dimension:"minecraft:the_end"},tag=player]
 
 #other things
 kill @e[type=wither]

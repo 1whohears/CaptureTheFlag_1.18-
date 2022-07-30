@@ -1,7 +1,5 @@
 #place flag yellow
 
-scoreboard players reset @s placeflag
-
 scoreboard players set yellow flagState 1
 
 kill @e[tag=my]

@@ -14,10 +14,10 @@ execute if score yellow flagState matches 1 at @e[tag=my] positioned ~ ~-2 ~ unl
 scoreboard players reset @a villagerKills
 
 #track the thief
-execute if score data ticks matches 0 if score red flagState matches 2 as @a[tag=carryred,limit=1] run function cf:game/red/setflagpos
-execute if score data ticks matches 0 if score blue flagState matches 2 as @a[tag=carryblue,limit=1] run function cf:game/blue/setflagpos
-execute if score data ticks matches 0 if score green flagState matches 2 as @a[tag=carrygreen,limit=1] run function cf:game/green/setflagpos
-execute if score data ticks matches 0 if score yellow flagState matches 2 as @a[tag=carryyellow,limit=1] run function cf:game/yellow/setflagpos
+execute if score data ticks matches 0 if score red flagState matches 2 as @a[tag=carryred,nbt={Dimension:"minecraft:overworld"},limit=1] in minecraft:overworld run function cf:game/red/setflagpos
+execute if score data ticks matches 0 if score blue flagState matches 2 as @a[tag=carryblue,nbt={Dimension:"minecraft:overworld"},limit=1] in minecraft:overworld run function cf:game/blue/setflagpos
+execute if score data ticks matches 0 if score green flagState matches 2 as @a[tag=carrygreen,nbt={Dimension:"minecraft:overworld"},limit=1] in minecraft:overworld run function cf:game/green/setflagpos
+execute if score data ticks matches 0 if score yellow flagState matches 2 as @a[tag=carryyellow,nbt={Dimension:"minecraft:overworld"},limit=1] in minecraft:overworld run function cf:game/yellow/setflagpos
 
 #if the thief is killed put the flag back
 execute if score red flagState matches 2 as @a[tag=carryred,limit=1,nbt={DeathTime:1s}] run function cf:game/red/dropflag
@@ -50,10 +50,10 @@ execute as @a[tag=player] if score @s trackgreen matches 1.. run function cf:gam
 execute as @a[tag=player] if score @s trackyellow matches 1.. run function cf:game/yellow/gettracker
 
 #update trackers 
-execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_red:1b}}}] run function cf:game/red/updatetracker
-execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_blue:1b}}}] run function cf:game/blue/updatetracker
-execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_green:1b}}}] run function cf:game/green/updatetracker
-execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_yellow:1b}}}] run function cf:game/yellow/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_red:1b}},Dimension:"minecraft:overworld"}] in minecraft:overworld run function cf:game/red/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_blue:1b}},Dimension:"minecraft:overworld"}] in minecraft:overworld run function cf:game/blue/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_green:1b}},Dimension:"minecraft:overworld"}] in minecraft:overworld run function cf:game/green/updatetracker
+execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_yellow:1b}},Dimension:"minecraft:overworld"}] in minecraft:overworld run function cf:game/yellow/updatetracker
 
 #check for winner
 execute if score notempty teamSize matches 1 if score red flagState matches 1 run function cf:game/red/win

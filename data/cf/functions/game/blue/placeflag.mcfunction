@@ -1,7 +1,5 @@
 #place flag blue
 
-scoreboard players reset @s placeflag
-
 scoreboard players set blue flagState 1
 
 kill @e[tag=mb]

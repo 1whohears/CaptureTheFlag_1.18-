@@ -77,6 +77,9 @@ scoreboard objectives add teamSize dummy "Players on Team"
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy
 scoreboard objectives add z dummy
+scoreboard objectives add xn dummy
+scoreboard objectives add yn dummy
+scoreboard objectives add zn dummy
 
 team add _blue
 team modify _blue color blue
