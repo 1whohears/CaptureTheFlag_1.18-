@@ -10,6 +10,7 @@ scoreboard objectives remove defenseTime
 scoreboard objectives remove attackTime
 scoreboard objectives remove teamnum
 scoreboard objectives remove enablekits
+scoreboard objectives remove display
 
 scoreboard objectives remove totalDeaths
 scoreboard objectives remove initDeaths

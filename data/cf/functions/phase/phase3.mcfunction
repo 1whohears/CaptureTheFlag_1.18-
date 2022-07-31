@@ -49,9 +49,9 @@ execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_y
 execute if score data ticks matches 0 as @a[nbt={SelectedItem:{tag:{track_flag_yellow:1b}},Dimension:"minecraft:the_nether"}] in minecraft:the_nether run function cf:game/yellow/updatetrackern
 
 #update worldboarder
-execute if score data seconds matches 300 if score data ticks matches 0 run worldborder set 600 300
-execute if score data seconds matches 600 if score data ticks matches 0 run worldborder set 300 300
-execute if score data seconds matches 900 if score data ticks matches 0 run worldborder set 100 300
+execute if score data seconds matches 310 if score data ticks matches 0 run worldborder set 600 300
+execute if score data seconds matches 620 if score data ticks matches 0 run worldborder set 300 300
+execute if score data seconds matches 930 if score data ticks matches 0 run worldborder set 100 300
 
 #check for winner
 execute if score notempty teamSize matches 1 if score red teamSize matches 1.. run function cf:game/red/win

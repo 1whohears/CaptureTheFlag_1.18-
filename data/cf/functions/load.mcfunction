@@ -6,6 +6,7 @@ scoreboard objectives add defenseTime dummy "Seconds Left to Build Your Defenses
 scoreboard objectives add attackTime dummy "Seconds Before Sudden Death"
 scoreboard objectives add teamnum dummy "Number of Teams (2 or 4)"
 scoreboard objectives add enablekits dummy "Are there kits?"
+scoreboard objectives add display "Spectator"
 
 scoreboard objectives add totalDeaths deathCount "Total Deaths"
 scoreboard objectives setdisplay list totalDeaths
@@ -106,3 +107,7 @@ team join _purple Battle_Time
 team join _yellow Deathmatch
 team join _blue Victory
 team join _red You_Suck
+team join _red Red
+team join _blue Blue
+team join _green Green
+team join _yellow Yellow
