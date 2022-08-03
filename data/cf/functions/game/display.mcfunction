@@ -15,23 +15,23 @@ scoreboard players reset Blue
 scoreboard players reset Green
 scoreboard players reset Yellow
 
-scoreboard players operation Members displayBlue = blue teamSize
 scoreboard players operation Members displayRed = red teamSize
+scoreboard players operation Members displayBlue = blue teamSize
 scoreboard players operation Members displayGreen = green teamSize
 scoreboard players operation Members displayYellow = yellow teamSize
 
-scoreboard players operation Red display = blue teamSize
-scoreboard players operation Blue display = red teamSize
+scoreboard players operation Red display = red teamSize
+scoreboard players operation Blue display = blue teamSize
 scoreboard players operation Green display = green teamSize
 scoreboard players operation Yellow display = yellow teamSize
-
-execute if score data phase matches 1..2 if score blue flagState matches 0 run scoreboard players set Flag_Not_Set displayBlue 0
-execute if score data phase matches 1..2 if score blue flagState matches 1 run scoreboard players set Flag_Safe displayBlue 0
-execute if score data phase matches 1..2 if score blue flagState matches 2 run scoreboard players set Flag_Stolen displayBlue 0
 
 execute if score data phase matches 1..2 if score red flagState matches 0 run scoreboard players set Flag_Not_Set displayRed 0
 execute if score data phase matches 1..2 if score red flagState matches 1 run scoreboard players set Flag_Safe displayRed 0
 execute if score data phase matches 1..2 if score red flagState matches 2 run scoreboard players set Flag_Stolen displayRed 0
+
+execute if score data phase matches 1..2 if score blue flagState matches 0 run scoreboard players set Flag_Not_Set displayBlue 0
+execute if score data phase matches 1..2 if score blue flagState matches 1 run scoreboard players set Flag_Safe displayBlue 0
+execute if score data phase matches 1..2 if score blue flagState matches 2 run scoreboard players set Flag_Stolen displayBlue 0
 
 execute if score data phase matches 1..2 if score green flagState matches 0 run scoreboard players set Flag_Not_Set displayGreen 0
 execute if score data phase matches 1..2 if score green flagState matches 1 run scoreboard players set Flag_Safe displayGreen 0
@@ -47,13 +47,13 @@ execute if score data phase matches 2 run scoreboard players operation Battle_Ti
 execute if score data phase matches 2 run scoreboard players operation Battle_Time display -= data seconds
 execute if score data phase matches 3 run scoreboard players operation Deathmatch display = data seconds
 
-execute if score data phase matches 1 run scoreboard players operation Defense_Time displayBlue = Defense_Time display
-execute if score data phase matches 2 run scoreboard players operation Battle_Time displayBlue = Battle_Time display
-execute if score data phase matches 3 run scoreboard players operation Deathmatch displayBlue = data seconds
-
 execute if score data phase matches 1 run scoreboard players operation Defense_Time displayRed = Defense_Time display
 execute if score data phase matches 2 run scoreboard players operation Battle_Time displayRed = Battle_Time display
 execute if score data phase matches 3 run scoreboard players operation Deathmatch displayRed = data seconds
+
+execute if score data phase matches 1 run scoreboard players operation Defense_Time displayBlue = Defense_Time display
+execute if score data phase matches 2 run scoreboard players operation Battle_Time displayBlue = Battle_Time display
+execute if score data phase matches 3 run scoreboard players operation Deathmatch displayBlue = data seconds
 
 execute if score data phase matches 1 run scoreboard players operation Defense_Time displayGreen = Defense_Time display
 execute if score data phase matches 2 run scoreboard players operation Battle_Time displayGreen = Battle_Time display
