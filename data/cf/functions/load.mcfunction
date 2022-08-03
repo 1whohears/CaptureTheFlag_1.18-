@@ -6,7 +6,7 @@ scoreboard objectives add defenseTime dummy "Seconds Left to Build Your Defenses
 scoreboard objectives add attackTime dummy "Seconds Before Sudden Death"
 scoreboard objectives add teamnum dummy "Number of Teams (2 or 4)"
 scoreboard objectives add enablekits dummy "Are there kits?"
-scoreboard objectives add display "Spectator"
+scoreboard objectives add display dummy "Spectator"
 
 scoreboard objectives add totalDeaths deathCount "Total Deaths"
 scoreboard objectives setdisplay list totalDeaths
